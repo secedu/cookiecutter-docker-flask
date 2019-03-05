@@ -1,5 +1,8 @@
 {
     "project_name": "COMP6443 challenge",
     "has_login": "True",
-    "theme": "flatly"
+    "theme": "flatly",
+    "database_name": "sample_db",
+    "database_user": "sample_user",
+    "database_pass": "sample_pass"
 }
