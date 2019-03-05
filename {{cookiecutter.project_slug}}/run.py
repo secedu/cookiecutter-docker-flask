@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
-from flaskr import create_app
+try:
+    from flaskr import create_app
+except ImportError:
+    raise RuntimeError("Couldn't import flaskr, have you run pip install -e app?")
 
 app = create_app()
 
