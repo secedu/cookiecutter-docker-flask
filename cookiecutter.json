@@ -5,5 +5,8 @@
     "theme": "flatly",
     "database_name": "sample_db",
     "database_user": "sample_user",
-    "database_pass": "sample_pass"
+    "database_pass": "sample_pass",
+    "_copy_without_render": [
+        "*.html"
+    ]
 }
