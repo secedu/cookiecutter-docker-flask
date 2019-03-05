@@ -4,4 +4,6 @@ This is a cookiecutter template for deploying COMP6443 style applications.
 
 ## Usage
 
+```bash
 cookiecutter git@github.com:secedu/cookiecutter-docker-flask.git
+```
