@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web_service:
+    build: ./app
+    restart: always
+    environment:
+      - FLAG=${FLAG}
+      - FLAG_SECRET=${FLAG_SECRET}
+      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
+      - PGPASSWORD=${DOCKER_PGPASSWORD}
+    ports:
+      - 0.0.0.0:8003:8000
+    networks:
+      - infra_net
+networks:
+  infra_net:
+    external: true
