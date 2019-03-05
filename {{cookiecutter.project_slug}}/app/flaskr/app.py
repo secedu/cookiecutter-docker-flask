@@ -14,7 +14,7 @@ class ConfigClass(object):
         SECRET_KEY = os.environ.get("SECRET_KEY", secrets.token_bytes(16))
         FLAG = os.environ["FLAG"]
         FLAG_SECRET = os.environ["FLAG_SECRET"]
-        TITLE = "{{cookiecutter.project_name}}"
+        TITLE = "{{cookiecutter.project_full_name}}"
         NAVBAR = []
         LOGIN_FORM = bool("{{cookiecutter.has_login}}")
         THEME = "{{cookiecutter.theme}}"

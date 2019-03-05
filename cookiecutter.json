@@ -1,5 +1,6 @@
 {
-    "project_name": "COMP6443 challenge",
+    "project_slug": "comp6443_challenge",
+    "project_full_name": "COMP6443 challenge",
     "has_login": "True",
     "theme": "flatly",
     "database_name": "sample_db",
