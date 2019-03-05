@@ -20,5 +20,5 @@ pipenv shell
 
 pip install -e app # Installs flaskr as a editable application
 
-FLAG=FLAG{SAMPLE_FLAG} FLAG_SECRET=SECRET DB_CONNECTION_STRING=postgresql://user:pass/database python run.py
+FLAG=FLAG{SAMPLE_FLAG} FLAG_SECRET=SECRET DB_CONNECTION_STRING=postgresql://user:pass@host/database python run.py
 ```
