@@ -1,11 +1,21 @@
 #!/usr/bin/env python3
 
-from setuptools import setup, find_packages
+from setuptools import (
+    setup,
+    find_packages,
+)
 
 setup(
-    name="flaskr",
+    name="{{cookiecutter.project_slug}}",
     packages=find_packages(),
     include_package_data=True,
-    install_requires=["flask"],
-    package_data={"flaskr": ["templates/*/*", "assets/static/*/*"]},
+    install_requires=[
+        "flask"
+    ],
+    package_data={
+        "{{cookiecutter.project_slug}}": [
+            "templates/*/*",
+            "assets/static/*/*"
+        ]
+    },
 )
