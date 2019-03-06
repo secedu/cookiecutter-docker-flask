@@ -4,7 +4,6 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-autopep8 = "*"
 black = "*"
 
 [packages]
@@ -26,6 +25,7 @@ gunicorn = "*"
 requests = "*"
 psycopg2 = "*"
 flask-core = {editable = true,git = "https://github.com/secedu/flask-core.git",ref = "master"}
+{{cookiecutter.project_slug}} = {path = "./app",editable = true}
 
 [requires]
 python_version = "3.7"
