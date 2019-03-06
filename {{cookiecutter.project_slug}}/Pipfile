@@ -25,7 +25,7 @@ psycopg2-binary = "*"
 gunicorn = "*"
 requests = "*"
 psycopg2 = "*"
-flask-core = {editable = true,git = "git@github.com/secedu/flask-core.git",ref = "master"}
+flask-core = {editable = true,git = "https://github.com/secedu/flask-core.git",ref = "master"}
 
 [requires]
 python_version = "3.7"
