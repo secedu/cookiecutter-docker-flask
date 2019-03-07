@@ -4,10 +4,10 @@ services:
     build: ./app
     restart: always
     environment:
-      - FLAG=${FLAG}
-      - FLAG_SECRET=${FLAG_SECRET}
-      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
-      - PGPASSWORD=${DOCKER_PGPASSWORD}
+      - FLAG=FLAG{REPLACE_ME}
+      - FLAG_SECRET=A_BAD_TEMPORARY_SECRET
+      - DB_CONNECTION_STRING=postgresql://{{database_user}}:{{database_pass}@database/{{database_name}}
+      - PGPASSWORD=***REMOVED***
     ports:
       - 0.0.0.0:8003:8000
     networks:
