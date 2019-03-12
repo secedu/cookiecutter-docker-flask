@@ -6,6 +6,7 @@
     "database_name": "sample_db",
     "database_user": "sample_user",
     "database_pass": "sample_pass",
+    "docker_publish_port": 8000,
     "_copy_without_render": [
         "*.html"
     ]
