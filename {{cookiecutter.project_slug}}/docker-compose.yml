@@ -8,6 +8,7 @@ services:
       - FLAG_SECRET=${FLAG_SECRET}
       - DB_CONNECTION_STRING=${DB_CONNECTION_STRING}
       - PGPASSWORD=${DOCKER_PGPASSWORD}
+      - FLASK_CORE_CONFIG=/app/web/config.py
     ports:
       - 0.0.0.0:8003:8000
     networks:
