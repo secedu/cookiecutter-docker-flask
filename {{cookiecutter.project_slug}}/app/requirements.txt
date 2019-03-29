@@ -1,3 +1,5 @@
+-e git+https://github.com/secedu/flask-core.git@master#egg=flask_core
+
 appdirs==1.4.3
 certifi==2018.11.29
 chardet==3.0.4
