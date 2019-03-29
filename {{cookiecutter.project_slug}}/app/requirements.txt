@@ -4,3 +4,4 @@
 # flask-core as needed when we rebuild.
 
 flask-core
+gunicorn==19.9.0

@@ -1,16 +1,14 @@
 version: '3'
 services:
-  web_service:
+  web_service:  # Specify environment variables through the --env-file flag (when its finally released)
     build: ./app
-    restart: always
+    restart: unless-stopped
+    env_file:
+      - "${ENV_FILE:-.prod.env}"
     environment:
-      - FLAG=I_AM_NOT_A_FLAG
-      - FLAG_SECRET=A_BAD_TEMPORARY_SECRET
-      - DB_CONNECTION_STRING=postgresql://{{cookiecutter.database_user}}:{{cookiecutter.database_pass}}@database/{{cookiecutter.database_name}}
-      - PGPASSWORD=***REMOVED***
-      - FLASK_CORE_CONFIG=/app/web/config.py
+      - PGPASSWORD=${INFRA_PGPASSWORD:?INFRA_PGPASSWORD envvar required for database updates.}
     ports:
-      - 0.0.0.0:{{cookiecutter.docker_publish_port}}:8000
+      - 0.0.0.0:${PUBLISH_PORT:?PUBLISH_PORT envvar required for publishing.}:8000
     networks:
       - infra_net
 networks:
