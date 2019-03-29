@@ -8,6 +8,7 @@ services:
       - FLAG_SECRET=A_BAD_TEMPORARY_SECRET
       - DB_CONNECTION_STRING=postgresql://{{cookiecutter.database_user}}:{{cookiecutter.database_pass}}@database/{{cookiecutter.database_name}}
       - PGPASSWORD=***REMOVED***
+      - FLASK_CORE_CONFIG=/app/web/config.py
     ports:
       - 0.0.0.0:{{cookiecutter.docker_publish_port}}:8000
     networks:
