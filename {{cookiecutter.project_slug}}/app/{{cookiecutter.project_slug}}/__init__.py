@@ -5,7 +5,7 @@
 from flask_core.app import create_app
 from flask_core.config import Config
 
-from . import models
+from . import models  # noqa
 
 # If you add more blueprints, add them here
 from .main import bp as main_bp
