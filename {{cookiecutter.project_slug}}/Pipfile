@@ -23,7 +23,7 @@ psycopg2-binary = "*"
 gunicorn = "*"
 requests = "*"
 psycopg2 = "*"
-flask-core = "=~!FLASK_CORE_LATEST!" 
+flask-core = "~=!FLASK_CORE_LATEST!" 
 {{cookiecutter.project_slug}} = {path = "./app",editable = true}
 
 [requires]

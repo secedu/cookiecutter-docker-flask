@@ -17,13 +17,13 @@ if os.path.isfile("config.py"):
 
 os.symlink("app/config.py", "config.py")
 
-# Get the latest release of flask-core
+# Get the latest release of flask-core major
 rv = urllib.request.urlopen(
     "https://pypi.python.org/pypi/flask-core/json"
 ).read()
 
 release_data = json.loads(rv)
-latest_fc = release_data["info"]["version"]
+latest_fc = release_data["info"]["version"].split('.')[0]
 
 # Pin Pipfile and requirements.txt to latest major
 for f in ["Pipfile", "app/requirements.txt"]:
@@ -31,4 +31,6 @@ for f in ["Pipfile", "app/requirements.txt"]:
         contents = fd.read()
 
     with open(f, "w") as fd:
-        fd.write(contents.replace("!FLASK_CORE_LATEST!", latest_fc))
+        fd.write(contents.replace(
+            "!FLASK_CORE_LATEST!", "%s.0" % (latest_fc,)
+        ))
